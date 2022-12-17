@@ -1,0 +1,31 @@
+.checkout{
+    display: flex;
+    padding: 10px;
+    height: max-content;
+    justify-content: space-between;
+    text-transform: capitalize;
+}
+.checkout h3{
+    font-weight: 450;
+    margin-left: 20px;
+    margin-bottom: 5px;
+}
+.checkout h3>span{
+    border-bottom: 1.5px solid #FFBF00;
+    padding-bottom: 2px;
+    width: fit-content;
+}
+.checkout__title{
+    margin-left: 20px;
+    border-bottom: 1px dashed lightgrey;
+    padding-bottom: 10px;
+}
+.checkout__left{
+    width: 100%;
+}
+/* mobile checkout //responsive */
+@media screen and (max-width:700px){
+    .checkout{
+        display: block;
+    }
+}

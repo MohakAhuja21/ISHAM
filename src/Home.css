@@ -1,0 +1,33 @@
+.home__image{
+    width: 100%;
+    z-index: -1;
+    margin-bottom: -100px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+.home{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto 0 auto;
+    max-width: 1500px;
+}
+.home__row{
+    display: flex;
+    z-index: 1;
+    /* left and right margin set to 5px */
+    margin: 0 5px 0 5px;
+}
+@media screen and (max-width:700px){
+    .home__row{
+        flex-direction: column;
+    }
+    .home__rowBestSeller{
+        margin: 10px;
+        /* border-inline: 12px ridge #ffbf005b;
+    writing-mode: horizontal-tb;
+    border-radius: 20px; */
+    border: 8px solid;
+    /* border-image: linear-gradient(to bottom, turquoise, greenyellow) 0 1; */
+    border-width: 10px;
+	border-image: repeating-linear-gradient(45deg, turquoise, pink 4%) 1;
+}
+}
