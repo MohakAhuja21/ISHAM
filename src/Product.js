@@ -10,6 +10,8 @@ function Product({ id, heading, title, price, image }) {
 
   const addToBasket = () => {
     // dispatch an action/ "item" into the data layer.
+    let data = []
+    localStorage.setItem("basket", JSON.stringify([...basket,{id,heading,title,price,image}]));
     dispatch({
       type: "ADD_TO_BASKET",
       item: {
@@ -21,6 +23,7 @@ function Product({ id, heading, title, price, image }) {
         image: image,
       },
     });
+    
   };
 
   return (
