@@ -19,9 +19,11 @@
 }
 
 .CheckoutProduct button{
-    background-color: #FFBF00;
-    border-radius: 2px;
-    border: 1px solid gray;
+    box-shadow: 2px 5px 8px rgba(0,0,0,0.3);
+    background-color: #32446C;
+    color: whitesmoke;
+    border-radius: 8px;
+    border: 1px solid transparent;
     padding: 6px;
     height: auto;
     cursor: pointer;
@@ -61,9 +63,12 @@ hr{
         margin-left: auto;
         font-size: large;
     }
+    .CheckoutProduct button{
+        margin-top: 14px;
+    }
     hr{
         display: block;
-        margin-top:20px;
+        margin-top:18px;
         border: 0.7px solid rgba(211, 211, 211, 0.632);
     }
 }

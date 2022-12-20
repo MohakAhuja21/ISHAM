@@ -16,7 +16,7 @@ export const getBasketTotal = (basket) =>
 // state is like what's the state of app. Action is like basically asking is what are we going to do with the basket, are we going to add the product or remove it.
 const reducer = (state, action) => {
   console.log(action);
-  switch (action.type) {
+  switch (action.type) {    
     case "ADD_TO_BASKET":
       return {
         ...state,

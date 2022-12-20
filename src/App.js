@@ -8,7 +8,6 @@ import { auth } from './firebase';
 import Checkout from './Checkout';
 import {useStateValue} from "./StateProvider";
 
-
 function App() {
   const [{},dispatch]=useStateValue();
 

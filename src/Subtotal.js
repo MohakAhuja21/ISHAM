@@ -21,9 +21,6 @@ function Subtotal() {
               {/* editing it from 0 items to basket.length */}
               Subtotal ({basket?.length} items): <strong>{value}</strong>
             </p>
-            <small className="subtotal__gift">
-              <input type="checkbox" /> This order contains a gift
-            </small>
           </>
         )}
         // used in the price area to get value in two decimal place.
