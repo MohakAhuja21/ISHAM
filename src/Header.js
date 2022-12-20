@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { auth } from "./firebase";
 import logo from "../src/source/ISHAM-white.png"
 import { useStateValue } from "./StateProvider";
-// import { BrowserRouter as Link} from "react-router-dom";
 
 function Header() {
   // the below step is after using react-context-api

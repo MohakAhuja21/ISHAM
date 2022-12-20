@@ -5,6 +5,8 @@ import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
 import FlipMove from "react-flip-move";
 
+
+
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
 
@@ -22,11 +24,8 @@ function Checkout() {
           {/* for every single item in the basket we will return a checkout product and its taking these props */}
           <h2 className="checkout__title">Your shopping basket</h2>
           <FlipMove
-                staggerDurationBy={30}
                 duration={750}
-                delay={30}
-                // enterAnimation={""}
-                // leaveAnimation={""}
+                easing="ease-out"
               >
                  {basket && basket?.length > 0 ? (
             <div>
@@ -42,7 +41,7 @@ function Checkout() {
             </div>
           ) : (
             <div className="checkout__emptyBasket">
-              <img src="https://htmlstream.com/front/assets/svg/illustrations/oc-empty-cart.svg"></img>
+              <img src="https://educatetosave.com//assets/fronts/svg/illustrations/empty-cart.svg"></img>
               <p>
                 Looks like you have not added anything yet.<br></br> Let's go
                 buy something!
