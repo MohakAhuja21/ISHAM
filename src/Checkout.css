@@ -27,14 +27,16 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     height: 70vh;
-    font-size: 17px;
-    text-align: left;    
-    letter-spacing: 1px;
-    /* margin-inline: 20px; */
 }
 .checkout__emptyBasket>img{
+    pointer-events: none;
     width: 340px;
+    margin-bottom: 10px;
+}
+.checkout__emptyBasket>P{
+    letter-spacing: 1px;
 }
 /* mobile checkout //responsive */
 @media screen and (max-width:700px){
@@ -42,17 +44,10 @@
         display: block;
     }
     .checkout__emptyBasket>img{
-        width: 210px;
-    }
-    .checkout__emptyBasket{
-        margin-top: 60px;
-        display: block;
-        text-align: center;
-        margin-inline: 20px;
+        width: 240px;
     }
     .checkout__emptyBasket>P{
-        margin-top: 10px;
-        text-align: left !important;
+        text-align: center;
+        margin-inline: 40px;
     }
-
 }
