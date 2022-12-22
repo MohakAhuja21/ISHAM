@@ -4,7 +4,6 @@ import CheckoutProduct from "./CheckoutProduct";
 import { useStateValue } from "./StateProvider";
 import Subtotal from "./Subtotal";
 import FlipMove from "react-flip-move";
-import emptyCart from "../src/source/empty cart.svg"
 
 function Checkout() {
   const [{ basket, user }, dispatch] = useStateValue();
@@ -40,7 +39,6 @@ function Checkout() {
             </div>
           ) : (
             <div className="checkout__emptyBasket">
-              <img src={emptyCart}></img>
               <p>Looks like you haven’t added anything to your cart yet!</p>
             </div>
           )}

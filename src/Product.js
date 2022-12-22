@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
+import Modal from "./Modal";
 
 // passing the values to product()
 function Product({ id, heading, title, price, image }) {
@@ -39,11 +40,15 @@ function Product({ id, heading, title, price, image }) {
     });
   };
 
+//  experimental "MODAL"
+const [openModal, setOpenModal]=useState(false)
+
+
   return (
     <div className="product">
       <div className="product__info">
         <h2>{heading}</h2>
-        <p style={{textAlign:"start", marginInline:"-10px"}}>{title}</p>
+        <p style={{ textAlign: "start", marginInline: "-10px" }}>{title}</p>
         <p className="product__price">
           <small>$</small>
           <strong>{price}</strong>
@@ -63,6 +68,11 @@ function Product({ id, heading, title, price, image }) {
           </svg>
         </div>
       </button>
+      {/* Experimental modal popup*/}
+      <br></br>
+      <button onClick={()=>{setOpenModal(true)
+      }} className="openModalBtn">Quick View</button>
+      {openModal && <Modal closeModal={setOpenModal}  />}
     </div>
   );
 }

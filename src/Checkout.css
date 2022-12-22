@@ -17,37 +17,33 @@
 }
 .checkout__title{
     margin-left: 20px;
-    border-bottom: 1px dashed lightgrey;
     padding-bottom: 10px;
 }
 .checkout__left{
     width: 100%;
 }
 .checkout__emptyBasket{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    height: 70vh;
+  text-align: left;
+border-bottom: 1px dashed lightgrey;
+  letter-spacing: 1px;
+  margin-inline: 10px;
 }
-.checkout__emptyBasket>img{
-    pointer-events: none;
-    width: 340px;
-    margin-bottom: 10px;
+.checkout__emptyBasket::before{
+    content: "";
+    position: absolute;
+    width: 0.15rem;
+    height: 90%;
+    background: #FFBF00;   
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
 }
-.checkout__emptyBasket>P{
-    letter-spacing: 1px;
+.checkout__emptyBasket>p{
+    margin-bottom: 5px;
 }
 /* mobile checkout //responsive */
 @media screen and (max-width:700px){
     .checkout{
         display: block;
-    }
-    .checkout__emptyBasket>img{
-        width: 240px;
-    }
-    .checkout__emptyBasket>P{
-        text-align: center;
-        margin-inline: 40px;
-    }
+    }  
 }

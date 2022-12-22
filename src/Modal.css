@@ -1,0 +1,39 @@
+.popup-image {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  height: 100%;
+  width: 100%;
+  z-index: 100;
+  backdrop-filter: blur(5px);
+}
+.popup-image span {
+  position: absolute;
+  top: 0px;
+  right: 15px;
+  font-size: 45px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  z-index: 100;
+}
+.popup-image > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 5px solid white;
+  width: 750px;
+  object-fit: cover;
+}
+@media (max-width: 700px) {
+  .popup-image > img {
+    width: 95%;
+  }
+  .popup-image span {
+    top: 50px;
+    right: 10px;
+  }
+}

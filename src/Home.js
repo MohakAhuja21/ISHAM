@@ -34,6 +34,7 @@ function Home() {
             ></img>
           </div>
         </div>
+        {/* products listing on homepage starts here.! */}
         <div className="home__row">
           <Product
             id="01275438"
