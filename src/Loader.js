@@ -23,7 +23,7 @@ const Loader = () => {
                 height={3}
                 progress={loader_status}
                 shadow={true}
-                onLoaderFinished={() => setLoader()}
+                onLoaderFinished={() => setLoader(0)}
             />
         </div>
     )
