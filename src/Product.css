@@ -8,7 +8,6 @@
   margin: 10px;
   padding: 12px;
   width: 100%;
-  /* z-index: 1; */
 }
 .product h2 {
   margin-bottom: 3px;
@@ -20,11 +19,6 @@
   object-fit: contain;
   margin-bottom: 20px;
 }
-/* .product img:hover {
-  transform: scale(1.1);
-  transition: all ease 0.6s;
-  cursor: zoom-in;
-} */
 .product__info {
   margin-bottom: 11px;
 }
