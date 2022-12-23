@@ -8,6 +8,7 @@
   margin: 10px;
   padding: 12px;
   width: 100%;
+  position: relative;
 }
 .product h2 {
   margin-bottom: 3px;
@@ -47,14 +48,15 @@
   overflow: hidden;
   cursor: pointer;
   text-align: center;
-  min-width: 144px;
+  min-width: 147px;
   color: var(--text);
   background: var(--background);
   transform: scale(var(--scale, 1));
   transition: transform 0.4s cubic-bezier(0.36, 1.01, 0.32, 1.27);
-  font-size: 16px;
+  font-size: 17px;
   outline: none;
   padding: 10px;
+  margin-bottom: -8px;
 }
 
 .button:active {
@@ -64,7 +66,7 @@
   display: block;
   position: relative;
   transform: translateY(var(--span-y, 0));
-  transition: transform 0.7s ease;
+  transition: transform 0.4s ease;
 }
 .button .cart{
   position: absolute;
@@ -96,7 +98,7 @@
   bottom: 7px;
   transform-origin: 50% 100%;
   transform: perspective(4px) rotateX(-6deg) scaleY(var(--fill, 0));
-  transition: transform 1.2s ease var(--fill-d);
+  transition: transform 1.0s ease var(--fill-d);
 }
 .button .cart svg {
   z-index: 1;
@@ -126,7 +128,7 @@
   --offset-d: 1.73s;
 }
 .button.loading .cart {
-  animation: cart 3s linear forwards 0.2s;
+  animation: cart 2.7s linear forwards 0.2s;
 }
 @keyframes cart {
   12.5% {
@@ -157,31 +159,45 @@
   }
 }
 
+.openModalBtn{
+  position: absolute;
+  top: 10px;
+  cursor: pointer;
+  right: 5px;
+  appearance: none;
+  border: none;
+  background: transparent;
+  color: #FFBF00;
+}
+
 /* making website responsive */
 @media screen and (max-width: 700px) {
   .product {
     width: auto;
     background: transparent;
-    padding: 40px;
+    padding: 35px;
     margin: 5px;
-    justify-content: flex-start;
     height: fit-content;
   }
   .product:first-child{
-    margin-left: 0.7em;
-    justify-content: flex-start;
+    margin-left: 0.8em;
   }
   .product:last-child{
-    margin-right: 0.7em;
+    margin-right: 1em;
   }
   .product h2 {
-    margin-top: -20px;
+    margin-top: -21px;
+    color: rgba(51, 51, 51, 0.861);
     margin-bottom: 6px;
   }
   .product img {
+    margin-top: 4px;
     max-height: 185px;
   }
   .product__price {
     height: fit-content;
+  }
+  .button{
+    margin-bottom: -28px;
   }
 }

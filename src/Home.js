@@ -74,7 +74,7 @@ function Home() {
             image="https://cdn.shopify.com/s/files/1/2429/1673/files/Metallic_Gold_700x700.png?v=1657963704"
           />
         </div>
-        <div className="home__row home__rowBestSeller">
+        <div className="home__row home__rowBest">
           <Product
             id="58930009"
             heading="Isham's Bestseller"

@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
 import Modal from "./Modal";
+import VisibilityIcon from '@mui/icons-material/Visibility';
 
 // passing the values to product()
 function Product({ id, heading, title, price, image }) {
@@ -14,7 +15,7 @@ function Product({ id, heading, title, price, image }) {
     button.addEventListener("click", (e) => {
       if (!button.classList.contains("loading")) {
         button.classList.add("loading");
-        setTimeout(() => button.classList.remove("loading"), 3700);
+        setTimeout(() => button.classList.remove("loading"), 2000);
       }
       e.preventDefault();
     })
@@ -48,15 +49,13 @@ const [openModal, setOpenModal]=useState(false)
     <div className="product">
       <div className="product__info">
         <h2>{heading}</h2>
-        <p style={{ textAlign: "start", marginInline: "-10px" }}>{title}</p>
+        <p>{title}</p>
         <p className="product__price">
           <small>$</small>
           <strong>{price}</strong>
         </p>
       </div>
-      <div>
-        <img src={image}></img>
-      </div>
+      <img src={image}></img>
       {/* this step is taken after react context api */}
       {/* when button is clicked it will perform an action. */}
       <button className="button" onClick={addToBasket}>
@@ -71,7 +70,7 @@ const [openModal, setOpenModal]=useState(false)
       {/* Experimental modal popup*/}
       <br></br>
       <button onClick={()=>{setOpenModal(true)
-      }} className="openModalBtn">Quick View</button>
+      }} className="openModalBtn"><VisibilityIcon></VisibilityIcon></button>
       {openModal && <Modal closeModal={setOpenModal}  />}
     </div>
   );
