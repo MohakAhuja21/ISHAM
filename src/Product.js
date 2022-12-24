@@ -10,18 +10,14 @@ function Product({ id, heading, title, price, image }) {
   const [{ basket }, dispatch] = useStateValue();
   // console.log(basket);
 
-  // add to cart button animation function
-  document.querySelectorAll(".button").forEach((button) =>
-    button.addEventListener("click", (e) => {
-      if (!button.classList.contains("loading")) {
-        button.classList.add("loading");
-        setTimeout(() => button.classList.remove("loading"), 2000);
-      }
-      e.preventDefault();
-    })
-  );
+  // EXPERIMENTAL
+  const[state,setState]=useState(false);
+
 
   const addToBasket = () => {
+    // EXPERIMENTAL
+    setState(!state);
+
     // dispatch an action/ "item" into the data layer.
     let data = [];
     localStorage.setItem(
@@ -48,7 +44,7 @@ const [openModal, setOpenModal]=useState(false)
   return (
     <div className="product">
       <div className="product__info">
-        <h2>{heading}</h2>
+        {/* <h2>{heading}</h2> */}
         <p>{title}</p>
         <p className="product__price">
           <small>$</small>
@@ -58,14 +54,7 @@ const [openModal, setOpenModal]=useState(false)
       <img src={image}></img>
       {/* this step is taken after react context api */}
       {/* when button is clicked it will perform an action. */}
-      <button className="button" onClick={addToBasket}>
-        <span>Add to basket</span>
-        <div class="cart">
-          <svg viewBox="0 0 36 26">
-            <polyline points="1 2.5 6 2.5 10 18.5 25.5 18.5 28.5 7.5 7.5 7.5"></polyline>
-            <polyline points="15 13.5 17 15.5 22 10.5"></polyline>
-          </svg>
-        </div>
+      <button style={{marginBottom:"-10px"}} className={'toggle-button '+ (state ? 'toggle-close': "")} onClick={addToBasket}>{state ? '✔' : "Add to Basket"}
       </button>
       {/* Experimental modal popup*/}
       <br></br>
