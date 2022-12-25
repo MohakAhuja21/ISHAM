@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import "./Product.css";
 import { useStateValue } from "./StateProvider";
 import Modal from "./Modal";
-import VisibilityIcon from '@mui/icons-material/Visibility';
+import VisibilityIcon from "@mui/icons-material/Visibility";
+import DoneIcon from '@mui/icons-material/Done';
+import { display } from "@mui/system";
 
 // passing the values to product()
 function Product({ id, heading, title, price, image }) {
@@ -11,9 +13,9 @@ function Product({ id, heading, title, price, image }) {
   // console.log(basket);
 
   // EXPERIMENTAL
-  const[state,setState]=useState(false);
+  const [state, setState] = useState(false);
 
-
+  
   const addToBasket = () => {
     // EXPERIMENTAL
     setState(!state);
@@ -37,14 +39,12 @@ function Product({ id, heading, title, price, image }) {
     });
   };
 
-//  experimental "MODAL"
-const [openModal, setOpenModal]=useState(false)
-
+  //  experimental "MODAL"
+  const [openModal, setOpenModal] = useState(false);
 
   return (
     <div className="product">
       <div className="product__info">
-        {/* <h2>{heading}</h2> */}
         <p>{title}</p>
         <p className="product__price">
           <small>$</small>
@@ -54,13 +54,25 @@ const [openModal, setOpenModal]=useState(false)
       <img src={image}></img>
       {/* this step is taken after react context api */}
       {/* when button is clicked it will perform an action. */}
-      <button style={{marginBottom:"-10px"}} className={'toggle-button '+ (state ? 'toggle-close': "")} onClick={addToBasket}>{state ? '✔' : "Add to Basket"}
+      <button
+        style={{ marginBottom: "-20px" }}
+        className={"toggle-button " + (state ? "toggle-close" : "")}
+        onClick={addToBasket}
+      >
+        <DoneIcon className="check"></DoneIcon>
+        {state ? "" : "Add to basket"}
       </button>
       {/* Experimental modal popup*/}
       <br></br>
-      <button onClick={()=>{setOpenModal(true)
-      }} className="openModalBtn"><VisibilityIcon></VisibilityIcon></button>
-      {openModal && <Modal closeModal={setOpenModal}  />}
+      <button
+        onClick={() => {
+          setOpenModal(true);
+        }}
+        className="openModalBtn"
+      >
+        <VisibilityIcon></VisibilityIcon>
+      </button>
+      {openModal && <Modal closeModal={setOpenModal} />}
     </div>
   );
 }
