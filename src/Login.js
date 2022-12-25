@@ -88,7 +88,7 @@ function Login() {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
-          <h5>Password</h5>
+          <h5 style={{marginTop:"5px"}}>Password</h5>
           <input
             type="password"
             value={password}
