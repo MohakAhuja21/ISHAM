@@ -30,7 +30,6 @@ function CheckoutProduct({ id, image, title, price }) {
         <small>$</small>
         <strong>{price}</strong>
       </p>
-      <hr />
     </div>
   )
 }

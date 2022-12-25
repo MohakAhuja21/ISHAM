@@ -68,13 +68,17 @@
 
 .openModalBtn{
   position: absolute;
-  top: 10px;
+  top: 0;
   cursor: pointer;
-  right: 5px;
+  right: 0;
   appearance: none;
   border: none;
   background: transparent;
   color: #FFBF00;
+  background-color: rgba(245, 245, 245, 0.516);
+  padding: 6px;
+  border-radius: 0px 12px;
+
 }
 
 /* making website responsive */

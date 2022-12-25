@@ -1,12 +1,14 @@
 .CheckoutProduct{
     display: flex;
-    margin: 18px 0 18px 0;
+    margin: 16px 0 16px 0;
+    border-bottom: 1px solid lightgray;
+    padding-bottom: 7px;
 }
 .CheckoutProduct__info{
     padding-left: 10px;
 }
 .CheckoutProduct__image{
-    object-fit: contain;
+    object-fit: cover;
     width: 200px;
     height: 200px;
     flex-grow: 0;
@@ -15,7 +17,6 @@
 
 .CheckoutProduct__price{
     margin-left: 15px;
-    height: fit-content;
     font-size: 19px;
 }
 
@@ -25,7 +26,7 @@
     color: whitesmoke;
     border-radius: 8px;
     border: 1px solid transparent;
-    padding: 6px;
+    padding: 7px;
     height: auto;
     cursor: pointer;
     margin-top: 10px;
@@ -37,18 +38,11 @@
     font-size: 17px;
 }
 
-hr{
-    display: none;
-}
-
-
 /* mobile responsive */
 @media screen and (max-width:700px){
     .CheckoutProduct{
-        display: block;
-    }
-    .CheckoutProduct__price{
-        margin-left: 10px;
+        display: flex;
+        align-items: flex-start;
     }
     .CheckoutProduct__image{
         width: 165px;
@@ -58,18 +52,10 @@ hr{
         font-size: 16px;
         text-align: left;
     }
-    .CheckoutProduct__price{
-        width: fit-content;
-        margin-top: -28px;
-        margin-left: auto;
-        font-size: large;
-    }
     .CheckoutProduct button{
         margin-top: 14px;
     }
-    hr{
-        display: block;
-        margin-top:18px;
-        border: 0.7px solid rgba(211, 211, 211, 0.632);
+    .CheckoutProduct__price strong{
+        font-size: x-large;
     }
 }
