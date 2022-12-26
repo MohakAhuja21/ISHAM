@@ -8,6 +8,7 @@
     padding-left: 10px;
 }
 .CheckoutProduct__image{
+    border-radius: 2px;
     object-fit: cover;
     width: 200px;
     height: 200px;
@@ -46,7 +47,7 @@
     }
     .CheckoutProduct__image{
         width: 165px;
-        height: 185px;
+        height: 165px;
     }
     .CheckoutProduct__title{
         font-size: 16px;
