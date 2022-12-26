@@ -46,16 +46,19 @@ function Product({ id, heading, title, price, image }) {
     <div className="product">
       <div className="product__info">
         <p>{title}</p>
-        <p className="product__price">
+        {/* <p className="product__price">
+          <small>$</small>
+          <strong>{price}</strong>
+        </p> */}
+      </div>
+      <img src={image}></img>
+      <p className="product__price">
           <small>$</small>
           <strong>{price}</strong>
         </p>
-      </div>
-      <img src={image}></img>
       {/* this step is taken after react context api */}
       {/* when button is clicked it will perform an action. */}
       <button
-        style={{ marginBottom: "-20px" }}
         className={"toggle-button " + (state ? "toggle-close" : "")}
         onClick={addToBasket}
       >

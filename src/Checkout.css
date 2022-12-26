@@ -6,12 +6,12 @@
     text-transform: capitalize;
 }
 .checkout h3{
-    font-size: 23px;
-    font-weight: 450;
+    font-size: 20px;
+    font-weight: 400;
     margin-bottom: 8px;
 }
 .checkout h3>span{
-    border-bottom: 1.5px solid #FFBF00;
+    border-bottom: 2px solid #FFBF00;
     padding-bottom: 2px;
     width: fit-content;
 }
@@ -39,7 +39,7 @@ border-bottom: 1px dashed lightgrey;
     transform: translateY(-50%);
 }
 .checkout__emptyBasket>p{
-    font-size: 19px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 /* mobile checkout //responsive */
