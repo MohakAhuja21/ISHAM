@@ -82,7 +82,7 @@
 }
 
 /* making website responsive */
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1200px) {
   .product {
     width: auto;
     background: transparent;
@@ -94,7 +94,7 @@
     margin-left: 0.8em;
   }
   .product:last-child{
-    margin-right: 1em;
+    margin-right: 0.7em;
   }
   .product h2 {
     margin-top: -21px;
@@ -102,15 +102,18 @@
     margin-bottom: 6px;
   }
   .product__info  p {
-    margin: -10px;
+    margin-top: -10px;
+    margin-inline: -10px;
     font-size: 17px;
   }
+  .product__info {
+    margin-bottom: 0;
+  }
   .product img {
-    margin-top: 12px;
+    margin-top: 14px;
     max-height: 195px;
   }
   .toggle-button{
-    margin-bottom: -22px;
+    margin-bottom: -24px;
   }
-  
 }
